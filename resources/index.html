@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html manifest="index.hyperesources/cache.manifest">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>Esmeraldina</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-height" />
+	<link href='https://fonts.googleapis.com/css?family=Rosario&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans&subset=latin' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="index.hyperesources/jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.hyperesources/Josefin.css" />
+	<script type="text/javascript" src="index.hyperesources/rainsnow.js"></script>
+	<script type="text/javascript" src="index.hyperesources/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="index.hyperesources/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="index.hyperesources/jquery-1.12.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.hyperesources/style1.css" />
+	<script type="text/javascript" src="index.hyperesources/print.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.hyperesources/print.min.css" />
+	<script type="text/javascript" src="index.hyperesources/pdfobject.js"></script>
+	
+	
+	
+	
+	<script>
+		
+		/*Leyenda de las posiciones del arreglo infoArray
+			contador de escena = 0
+			condicion = 1
+			auto timer = 2
+			delay/remaining = 3
+			startTime = 4
+			automatico boolean = 5
+			autoOnOff = 6
+		*/
+		
+		window.infoArray = [1, 2, setTimeout(0), 0, 0, false, false];
+		
+		</script>
+
+<script>
+
+	/*
+		window.addEventListener(‘touchmove’, function(event) {
+		event.preventDefault();
+		}, false);
+	*/
+	</script>
+	
+	  <script type="text/javascript">
+  function myCallback(hypeDocument, element, event) {
+    if (isScalePossible()){
+      window.myHypeContainerId = hypeDocument.documentId();
+      $('#' + window.myHypeContainerId).css({
+        '-moz-transform-origin': '0% 0%',
+        '-webkit-transform-origin': '0% 0%',
+        '-ms-transform-origin': '0% 0%',
+        '-o-transform-origin': '0% 0%',					
+        'transform-origin': '0% 0%',
+        margin: 0
+      });
+      scaleSite();
+      $(window).resize(scaleSite);
+    }
+    return true;
+  }
+  if("HYPE_eventListeners" in window === false) {
+    window.HYPE_eventListeners = Array();
+  }
+  window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback":myCallback});
+  function scaleSite()
+  {
+  	var hypeContainer = $('#' + window.myHypeContainerId);
+    var containerWidth = hypeContainer.width();
+    var containerHeight = hypeContainer.height();
+    var parentWidth = hypeContainer.parent().width();
+    var parentHeight = hypeContainer.parent().height();
+    var scaleWidth = parentWidth / containerWidth;
+    var scaleHeight = parentHeight / containerHeight;
+    var scale = Math.min(scaleWidth, scaleHeight);
+    var left = (containerWidth * scale < parentWidth) ? ((parentWidth - (containerWidth * scale)) / 2) + 'px' : '0px';
+    var top = (containerHeight * scale < parentHeight) ? ((parentHeight - (containerHeight * scale)) / 2) + 'px' : '0px' ;
+    hypeContainer.css({
+        "-moz-transform"    : "scale("+scale+")",
+        "-webkit-transform" : "scale("+scale+")",
+        "-ms-transform"     : "scale("+scale+")",
+        "-o-transform"      : "scale("+scale+")",
+        "transform"         : "scale("+scale+")",
+        "left" : left,
+        "top" : top
+    });
+  }
+  function isScalePossible() 
+  {
+    can = 'MozTransform' in document.body.style;
+    if(!can) can = 'webkitTransform' in document.body.style;
+    if(!can) can = 'msTransform' in document.body.style;
+    if(!can) can = 'OTransform' in document.body.style;
+    if(!can) can = 'transform' in document.body.style;
+    if(!can) can = 'Transform' in document.body.style;
+    return can;
+  }
+</script>	
+	
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="index_hype_container" style="margin:auto;position:relative;width:1280px;height:800px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?36088"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div></div>
+		<div>
+</div>
+		<div>Autores:Isaías Díaz MercedAna Ilsa Rivera
+</div>
+		<div>Ilustración:
+Alfredo Ortiz</div>
+		<div>4</div>
+		<div>9</div>
+		<div>14</div>
+		<div>7</div>
+		<div>12</div>
+		<div>1</div>
+		<div>5</div>
+		<div>10</div>
+		<div>3</div>
+		<div>15</div>
+		<div>8</div>
+		<div>13</div>
+		<div>6</div>
+		<div>2</div>
+		<div>11</div>
+		<div></div>
+		<div></div>
+		<div>Actividades Complementarias</div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>

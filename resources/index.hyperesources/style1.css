@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----Rain----*/
+body { margin:0; padding:0; }
+.rain { width:100%; overflow-x:hidden;}
+.rain .drop { display: block; z-index:0; position: absolute; background-repeat: no-repeat; min-width:2px; min-height:4px;
+background:#5B74FD;
+background: -moz-linear-gradient(top, #5B74FD, #E7F4FA);
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5B74FD), to(#E7F4FA));
+background: -webkit-linear-gradient(top, #5B74FD, #E7F4FA);
+background: -ms-linear-gradient(top, #5B74FD, #E7F4FA);
+background: -o-linear-gradient(top, #5B74FD, #E7F4FA);
+border-radius: 50% 50% 50% 50%/80% 80% 20% 20%;
+-moz-border-radius: 50% 50% 50% 50%/90% 90% 10% 10%;
+-webkit-border-radius:63px 63px 63px 63px/138px 138px 42px 42px;
+}
+.rain .lighting_effect { position:absolute; left:50%; top:5%; width:1000px; height:562px; background:url(lighting_bg.png) no-repeat; opacity:0; }
+.rain .lighting_effect.right { right:inherit; right:20%; transform: rotate(-90deg); -ms-transform:rotate(-90deg); -moz-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); }
+
+/*-----Snow----*/
+.snow { width:100%; overflow-x:hidden; background-image:url(images/snow_bg.jpg); background-repeat:no-repeat; background-size:100% 100%; background-attachment:fixed; background-color:#000; }
+.snow .drop { display: block; z-index:0; position:fixed; background-repeat: no-repeat; min-width:2px; min-height:2px;
+border-radius: 180px;
+-moz-border-radius: 180px;
+-webkit-border-radius: 180px;
+background:#fff;
+background: -moz-linear-gradient(top, #fff, #eee);
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#eee));
+background: -webkit-linear-gradient(top, #fff, #eee);
+background: -ms-linear-gradient(top, #fff, #eee);
+background: -o-linear-gradient(top, #fff, #eee);
+box-shadow:0 0 5px #fff;
+-moz-box-shadow:0 0 5px #fff;
+-webkit-box-shadow:0 0 5px #fff; }
+
+/*-----Balloon----*/
+.balloon { width:100%; overflow-x:hidden; background-image:url(images/balloon_bg.jpg); background-repeat:no-repeat; background-size:100% 100%; background-attachment:fixed; background-color:#000; }
+.balloon .drop { display: block; z-index:0; position: absolute; background-repeat: no-repeat; min-width:2px; min-height:2px;
+border-radius: 180px;
+-moz-border-radius: 180px;
+-webkit-border-radius: 180px;
+border:solid 1px #fff;
+}
+
+/*-----Other----*/
+.content { width:550px; float: right; background:rgba(237, 237, 237, 0.5); font-family:arial; font-size:13px; color:#000; position:relative; z-index:1; }
+.nav { background:#000; }
+.nav a { display:inline-block; font-size:12px; padding:5px 15px; background:#000; color:#fff; text-decoration:none; text-transform:uppercase; }
+.nav a.active { background:#027CD5; color:#fff; }
+h2 { font-size:14px; color:#000; background:#fff; padding:5px 10px;  margin:0; }
+h2 a { font-weight: normal;; font-size: 13px; display: inline-block; margin: 0 0 0 15px; color: #000; text-decoration: none; }
+h2 a.active { color: #027CD5; }
+pre { font-style: italic; color: #fff; font-size: 13px; margin:10px; }
+table { margin:0; border-collapse:collapse; background:rgba(255, 255, 255, 0.5); font-size: 12px;  }
+table td { padding:10px;  vertical-align:top; border-top:solid 1px rgba(255, 255, 255, 0.5); }
+table td.bl { border-left:solid 1px rgba(255, 255, 255, 0.5); }
+table td strong { font-weight:bolder; }
+table td .default { color:#027CD5; }
+table td .note { color:#D05656; }
+.features { padding:20px 0; margin-left:50px; }
+.features li { margin:5px 0; }
+.inote { text-align:center; color:#fff; padding:5px; background:#000; }
+.btn-back { position:absolute; left:20px; top:20px; z-index:+99999; color:#fff; font-family:'Comic Sans MS', cursive; font-size:20px; text-decoration:none; font-weight:bold; }

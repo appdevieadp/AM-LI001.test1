@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<!-- <iframe src="actividades-complementarias_iframe.htm" name="iframe_a"></iframe>
+
+<p><a href="actividades-complementarias.pdf" target="iframe_a"></a></p>
+${resourcesFolderName}
+-->
+    
+<iframe src="actividades-complementarias.pdf"> </iframe>
+
+<!-- insert just before the closing body tag </body> -->
+<script src='pdfobject.js'></script>
+<script>
+var options = {
+   pdfOpenParams: { view: 'FitH', pagemode: 'thumbs', scrollbar: '1', toolbar: '1', statusbar: '1', messages: '1', navpanes: '1' },
+   fallbackLink: ''
+};
+
+PDFObject.embed("actividades-complementarias.pdf", false, options);
+</script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "esmeraldina",
+  "version": "1.0.0",
+  "description": "Esmeraldina E-Book",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Anisa, INC",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.7.12"
+  }
+}
