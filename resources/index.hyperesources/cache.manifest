@@ -1,10 +1,10 @@
 CACHE MANIFEST
-#539203587.510758
+#539218098.642244
 
 ../index.html
 HYPE-584.thin.min.js
 HYPE-584.full.min.js
-index_hype_generated_script.js?36088
+index_hype_generated_script.js?55378
 jquery-1.10.2.min.js
 Josefin.css
 JosefinSans-Bold.ttf
@@ -103,6 +103,8 @@ interludio.mp3
 bower.json
 package.json
 actividades-complementarias.pdf
+pdfobject.min.js
+pdfobject.js
 print.min.js
 print.min.css
 actividades-complementarias.html
@@ -149,7 +151,16 @@ flecha-end-over_navigate_2x.png
 flecha-end-press_navigate.png
 print-actividades_menu-bar.png
 print-actividades-over_menu-bar.png
-pdfobject.js
+ac_page_5.jpg
+ac_page_5_2x.jpg
+ac_page_4.jpg
+ac_page_4_2x.jpg
+ac_page_3.jpg
+ac_page_3_2x.jpg
+ac_page_2.jpg
+ac_page_2_2x.jpg
+ac_page_1.jpg
+ac_page_1_2x.jpg
 PIE.htc
 blank.gif
 iframe-htmlwidget.html

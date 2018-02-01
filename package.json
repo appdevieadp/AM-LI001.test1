@@ -9,6 +9,7 @@
   "author": "Anisa, INC",
   "license": "MIT",
   "dependencies": {
-    "electron": "^1.7.12"
+    "electron": "^1.7.12",
+    "electron-pdf-window": "^1.0.12"
   }
 }

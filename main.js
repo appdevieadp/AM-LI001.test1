@@ -15,10 +15,13 @@ app.on('ready', function(){
         height: "800",
         center: true,
         title: "Esmeraldina",
-        backgroundColor: "#000000"
-    });
+        backgroundColor: "#000000",
+        webPreferences: {
+            plugins: true
+        }
+});
 
-    // Load html into window
+// Load html into window
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'resources/index.html'),
         protocol: 'file:',
