@@ -1,15 +1,37 @@
 {
   "name": "esmeraldina",
+  "productName": "Esmeraldina",
   "version": "1.0.0",
   "description": "Esmeraldina E-Book",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=resources/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . Esmeraldina --overwrite --asar=true --platform=win32 --arch=ia32 --icon=resources/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=\"Anisa, INC\" --version-string.FileDescription=CE --version-string.ProductName=\"Esmeraldina\"",
+    "package-linux": "electron-packager . Esmeraldina --overwrite --asar=true --platform=linux --arch=x64 --icon=resources/icons/png/icon.png --prune=true --out=release-builds",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -mwl",
+    "mac": "electron-builder -m",
+    "win": "electron-builder -w",
+    "lin": "electron-builder -l"
+  },
+  "build": {
+    "appId": "com.anisapr.esmeraldina",
+    "directories": {
+      
+    },
+    "mac": {
+      "category": "E-Book"
+    }
   },
   "author": "Anisa, INC",
   "license": "MIT",
   "dependencies": {
+    "npm": "^5.6.0"
+  },
+  "devDependencies": {
     "electron": "^1.7.12",
-    "electron-pdf-window": "^1.0.12"
+    "electron-builder": "^19.55.3",
+    "electron-packager": "^10.1.2"
   }
 }

@@ -19,9 +19,9 @@ app.on('ready', function(){
         webPreferences: {
             plugins: true
         }
-});
+    });
 
-// Load html into window
+    // Load html into window
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'resources/index.html'),
         protocol: 'file:',
