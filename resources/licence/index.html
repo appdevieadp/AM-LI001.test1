@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body>
+    <!-- Container -->
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col">
+                <div class="jumbotron">
+                    <h1 class="display-3">Registro</h1>
+                    <p class="lead">Entre su clave de producto</p>
+                    <div class="input-group">
+                        <div class="input-group-prepend">                                        
+                            <span class="input-group-text">Clave de Producto</span>
+                        </div>
+                        <input class="form-control" id="licence" aria-label="With input"></input>
+                    </div>
+                    <div class="w-100 text-center mt-3">
+                        <button onclick="registerLicence()" type="button" class="btn btn-primary">Registrar</button>
+                    </div>
+                    <p class="mt-5" id="response"></p>
+                </div>                               
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- JS Imports -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+
+</html>

@@ -17,9 +17,7 @@
   },
   "build": {
     "appId": "com.anisapr.esmeraldina",
-    "directories": {
-      
-    },
+    "directories": {},
     "mac": {
       "category": "E-Book"
     }
@@ -27,11 +25,12 @@
   "author": "Anisa, INC",
   "license": "MIT",
   "dependencies": {
+    "electron-pdf-window": "^1.0.12",
     "npm": "^5.6.0"
   },
   "devDependencies": {
     "electron": "^1.7.12",
-    "electron-builder": "^19.55.3",
+    "electron-builder": "^20.2.0",
     "electron-packager": "^10.1.2"
   }
 }
