@@ -10,7 +10,8 @@
     "package-win": "electron-packager . Esmeraldina --overwrite --asar=true --platform=win32 --arch=ia32 --icon=resources/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=\"Anisa, INC\" --version-string.FileDescription=CE --version-string.ProductName=\"Esmeraldina\"",
     "package-linux": "electron-packager . Esmeraldina --overwrite --asar=true --platform=linux --arch=x64 --icon=resources/icons/png/icon.png --prune=true --out=release-builds",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder -mwl",
+    "publish": "electron-builder -mw -p always",
+    "dist": "electron-builder -w",
     "mac": "electron-builder -m",
     "win": "electron-builder -w",
     "lin": "electron-builder -l"
@@ -21,11 +22,12 @@
     "mac": {
       "category": "E-Book"
     }
-  },
+  },  
   "author": "Anisa, INC",
   "license": "MIT",
   "dependencies": {
     "electron-pdf-window": "^1.0.12",
+    "electron-updater": "^2.21.0",
     "npm": "^5.6.0"
   },
   "devDependencies": {

@@ -5,4 +5,43 @@ body {
 
 .jumbotron {
     background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.header {
+  font-size: 32pt;
+}
+
+hr {
+  margin: 0 -15px 0 -15px;
+}
+
+.hr-green {
+  border-top: 5px solid #97C135;
+}
+
+.hr-orange {
+  border-top: 5px solid #FA6B01;
+}
+
+.hr-blue {
+  border-top: 5px solid #229BA5;
+}
+
+.btn {
+  background-color: #FA6B01;
+  border-color: #FA6B01;
+}
+
+.info-footer p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.footer {
+  background-color: #229BA5;
+  color: white;
+  height: 100%;
 }
