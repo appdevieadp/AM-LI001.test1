@@ -9,7 +9,7 @@ const {autoUpdater} = require("electron-updater");
 
 // Properties
 const appName = "Esmeraldina";
-const inDevelopment = true;
+const inDevelopment = false;
 const showDebug = true && inDevelopment;
 let mainWindow;
 let registrationWindow;
@@ -25,10 +25,7 @@ const store = new Store({
   });
 
 // Listen for app to be ready
-app.on('ready', function(){
-
-    // Set auto updater
-    autoUpdater.checkForUpdates();
+app.on('ready', function(){   
 
     // First we'll get our height and width. This will be the defaults if there wasn't anything saved
     let hasBeenRegistered = store.get('hasBeenRegistered');
@@ -38,6 +35,9 @@ app.on('ready', function(){
     } else {
         showRegistrationWindow(); 
     }           
+
+     // Set auto updater
+     autoUpdater.checkForUpdates();
 
 })
 
@@ -78,6 +78,8 @@ function showRegistrationWindow() {
     if (showDebug) {
         registrationWindow.webContents.openDevTools();
     }
+
+    mainWindow = registrationWindow;
 
 }
 
@@ -155,15 +157,27 @@ function showMainWindow() {
 // app.on('ready', function()  {
 //   autoUpdater.checkForUpdates();
 // });
-autoUpdater.on('checking-for-update', () => {     
+
+autoUpdater.on('checking-for-update', () => { 
+    console.log("Main Window: " + mainWindow);
+    mainWindow.webContents.send('message', "Checking for update");
 })
 autoUpdater.on('update-available', (info) => {
+    dialog.showMessageBox({ 
+        message: "Se ha detectado una actualización. Se informará cuando esté lista.",
+        buttons: ["OK"]
+    }, function() {
+        // Do nothing
+    });
 })
 autoUpdater.on('update-not-available', (info) => {
+    mainWindow.webContents.send('message', "Update not available");
 })
 autoUpdater.on('error', (err) => {
+    mainWindow.webContents.send('message', err.toString());    
 })
 autoUpdater.on('download-progress', (progressObj) => {
+    mainWindow.webContents.send('message', progressObj.toString());
 })
 autoUpdater.on('update-downloaded', (info) => {
     dialog.showMessageBox({ 
