@@ -41,6 +41,10 @@ app.on('ready', function(){
 
 })
 
+app.on('window-all-closed', () => {
+    app.quit();
+});
+
 ipcMain.on('success-registration', function (e, data) {
     if (data == "true") {
         store.set("hasBeenRegistered", true);
@@ -79,7 +83,7 @@ function showRegistrationWindow() {
         registrationWindow.webContents.openDevTools();
     }
 
-    mainWindow = registrationWindow;
+    mainWindow = registrationWindow;    
 
 }
 
@@ -138,7 +142,7 @@ function showMainWindow() {
 
     if (showDebug) {
         mainWindow.webContents.openDevTools();
-    }
+    }    
 
 }
 
@@ -174,7 +178,14 @@ autoUpdater.on('update-not-available', (info) => {
     mainWindow.webContents.send('message', "Update not available");
 })
 autoUpdater.on('error', (err) => {
-    mainWindow.webContents.send('message', err.toString());    
+    mainWindow.webContents.send('message', err.toString()); 
+    
+    dialog.showMessageBox({ 
+        message: err.toString(),
+        buttons: ["OK"]
+    }, function() {
+        // Do nothing
+    });  
 })
 autoUpdater.on('download-progress', (progressObj) => {
     mainWindow.webContents.send('message', progressObj.toString());
